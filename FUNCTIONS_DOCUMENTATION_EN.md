@@ -1,6 +1,6 @@
 # SUD_Tasks: Detailed Function Documentation
 
-This document provides a comprehensive overview of all classes and functions in the SUD_Tasks repository. It is intended to help students and developers quickly understand the structure and purpose of each component in the codebase.
+This document provides a comprehensive overview of all classes and functions in the SUD_Tasks repository. 
 
 ---
 
