@@ -11,9 +11,20 @@ public class PassengerVehicle extends Vehicle {
 
     public PassengerVehicle(double tankSize, double maxSpeed, GPSPosition position, int seatCount) {
         super(tankSize, maxSpeed, position);
-        this.seatCount = seatCount;
-        this.passengers = new ArrayList<>();
+        setSeatCount(seatCount);
+        setPassengers(new ArrayList<>());
     }
+
+    public void setSeatCount(int seatCount) {
+        if (seatCount <= 0) throw new IllegalArgumentException("Seat count must be positive");
+        this.seatCount = seatCount;
+    }
+
+    public void setPassengers(List<Employee> passengers) {
+        if (passengers == null) throw new IllegalArgumentException("Passengers list cannot be null");
+        this.passengers = passengers;
+    }
+
     public boolean boardPassenger(Employee e) {
         if (passengers.size() < seatCount) {
             passengers.add(e);

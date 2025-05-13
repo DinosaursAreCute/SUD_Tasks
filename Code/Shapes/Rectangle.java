@@ -1,4 +1,4 @@
-// Represents a rectangle. Validates side lengths.
+//a rectangle
 package Shapes;
 
 public class Rectangle extends Shape2D {
@@ -6,10 +6,20 @@ public class Rectangle extends Shape2D {
     private double height;
 
     public Rectangle(double width, double height) {
-        if (width <= 0 || height <= 0) throw new IllegalArgumentException("Width and height must be positive");
+        setWidth(width);
+        setHeight(height);
+    }
+
+    public void setWidth(double width) {
+        if (width <= 0) throw new IllegalArgumentException("Width must be positive");
         this.width = width;
+    }
+
+    public void setHeight(double height) {
+        if (height <= 0) throw new IllegalArgumentException("Height must be positive");
         this.height = height;
     }
+
     @Override
     public double getArea() { return width * height; }
     @Override

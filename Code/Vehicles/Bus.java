@@ -9,12 +9,19 @@ public class Bus extends PassengerVehicle {
 
     public Bus(double tankSize, double maxSpeed, GPSPosition position, int seatCount, String driverName) {
         super(tankSize, maxSpeed, position, seatCount);
-        this.driverName = driverName;
+        setDriverName(driverName);
     }
+
     @Override
     public void setDriver(Driver driver) {
         if (driver.getLicense() != DriverLicense.D) throw new IllegalArgumentException("Bus driver must have license D");
         super.setDriver(driver);
     }
+
+    public void setDriverName(String driverName) {
+        if (driverName == null || driverName.isEmpty()) throw new IllegalArgumentException("Driver name cannot be null or empty");
+        this.driverName = driverName;
+    }
+
     public String getDriverName() { return driverName; }
 }

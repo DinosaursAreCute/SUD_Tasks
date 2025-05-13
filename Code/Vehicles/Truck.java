@@ -1,4 +1,3 @@
-// Represents a truck with a loading area. Requires driver with license C.
 package Vehicels;
 
 import Employees.Driver;
@@ -10,9 +9,20 @@ public class Truck extends Vehicle {
 
     public Truck(double tankSize, double maxSpeed, GPSPosition position, double loadingArea) {
         super(tankSize, maxSpeed, position);
-        this.loadingArea = loadingArea;
-        this.loadedArea = 0;
+        setLoadingArea(loadingArea);
+        setLoadedArea(0);
     }
+
+    public void setLoadingArea(double loadingArea) {
+        if (loadingArea <= 0) throw new IllegalArgumentException("Loading area must be positive");
+        this.loadingArea = loadingArea;
+    }
+
+    public void setLoadedArea(double loadedArea) {
+        if (loadedArea < 0 || loadedArea > loadingArea) throw new IllegalArgumentException("Loaded area must be between 0 and the maximum loading area");
+        this.loadedArea = loadedArea;
+    }
+
     public void load(double area) {
         if (loadedArea + area > loadingArea) throw new IllegalArgumentException("Exceeds max loading area");
         loadedArea += area;

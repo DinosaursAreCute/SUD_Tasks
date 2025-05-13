@@ -19,69 +19,114 @@ Dieses Dokument bietet einen umfassenden Überblick über alle Klassen und Funkt
 - **Department(String name, Manager head)**: Konstruktor. Erstellt eine Abteilung mit einem Namen und einem Manager als Leiter.
 - **void addEmployee(Employee e)**: Fügt einen Mitarbeiter zur Abteilung hinzu.
 - **boolean removeEmployee(Employee e)**: Entfernt einen Mitarbeiter aus der Abteilung.
-- **Manager changeHead(Manager newHead)**: Wechselt den Abteilungsleiter zu einem neuen Manager.
-- **double getTotalIncome()**: Gibt die Gesamtkosten für die Gehälter aller Mitarbeiter in der Abteilung zurück.
-- **List<Employee> getEmployees()**: Gibt eine Liste aller Mitarbeiter in der Abteilung zurück.
-- **String getEmployeeList()**: Gibt eine Zeichenkette mit allen Mitarbeitern zurück.
+- **Manager changeHead(Manager newHead)**: Ändert den Abteilungsleiter zu einem neuen Manager.
 
 ### Driver.java
-- **Driver(int id, String name, double hourlyRate, DriverLicense license)**: Konstruktor. Erstellt einen Fahrer mit einer ID, einem Namen, einem Stundenlohn und einer Lizenz.
-- **DriverLicense getLicense()**: Gibt die Fahrerlaubnis zurück.
+- **Driver(int id, String name, double hourlyRate, char license)**: Konstruktor. Erstellt einen Fahrer mit einer Lizenz.
+- **void setLicense(char license)**: Legt den Lizenztyp des Fahrers fest.
+- **DriverLicense getLicense()**: Gibt den Lizenztyp des Fahrers zurück.
 
-### Employee.java (abstrakt)
-- **Employee(int id, String name)**: Konstruktor. Erstellt einen Mitarbeiter mit einer ID und einem Namen.
-- **int getId()**: Gibt die ID des Mitarbeiters zurück.
-- **String getName()**: Gibt den Namen des Mitarbeiters zurück.
-- **double getSalary()**: Gibt das Gehalt des Mitarbeiters zurück (in Unterklassen implementiert).
+### Employee.java
+- **Employee(int id, String name)**: Abstrakte Basisklasse für Mitarbeiter.
+- **void setId(int id)**: Legt die ID des Mitarbeiters fest.
+- **void setName(String name)**: Legt den Namen des Mitarbeiters fest.
 
 ### EmployeeManagement.java
 - **void addEmployee(Employee e)**: Fügt einen Mitarbeiter zum Verwaltungssystem hinzu.
-- **void addDepartment(Department d)**: Fügt eine Abteilung zum Verwaltungssystem hinzu.
-- **void workDay()**: Simuliert einen Arbeitstag für alle Mitarbeiter.
+- **boolean removeEmployee(Employee e)**: Entfernt einen Mitarbeiter aus dem Verwaltungssystem.
 
 ### Manager.java
-- (Konstruktor und Methoden ähnlich wie bei Employee, mit Bonusverwaltung.)
+- **Manager(int id, String name, double fixedSalary, double bonusPercent)**: Konstruktor. Erstellt einen Manager mit einem festen Gehalt und einem Bonusprozentsatz.
+- **double getBonus(double base)**: Berechnet den Bonus basierend auf einem Grundgehalt.
 
 ### OfficeWorker.java
-- **OfficeWorker(int id, String name, double fixedSalary)**: Konstruktor. Erstellt einen Büroangestellten.
+- **OfficeWorker(int id, String name, double fixedSalary)**: Konstruktor. Erstellt einen Büroangestellten mit einem festen Gehalt.
 - **double getSalary()**: Gibt das feste Gehalt zurück.
 
 ### ShiftWorker.java
+- **ShiftWorker(int id, String name, double hourlyRate)**: Konstruktor. Erstellt einen Schichtarbeiter mit einem Stundenlohn.
 - **void work()**: Erhöht die gearbeiteten Stunden um 8.
-- **void work(int hours)**: Erhöht die gearbeiteten Stunden um eine angegebene Anzahl.
+- **void work(int hours)**: Erhöht die gearbeiteten Stunden um einen angegebenen Betrag.
 
 ---
 
 ## Formen-Modul
 
-Jede Formklasse (z. B. Circle, Cone, Cuboid, Cylinder, Rectangle, RegularPrism, RegularPyramid, Sphere) enthält:
-- Konstruktoren für jede Form mit den entsprechenden Parametern (z. B. Radius, Höhe).
-- Methoden zur Berechnung von Fläche, Volumen und anderen geometrischen Eigenschaften.
+### Circle.java
+- **Circle(double radius)**: Konstruktor. Erstellt einen Kreis mit einem Radius.
+- **double getArea()**: Gibt die Fläche des Kreises zurück.
+- **double getPerimeter()**: Gibt den Umfang des Kreises zurück.
+
+### Cone.java
+- **Cone(double radius, double height)**: Konstruktor. Erstellt einen Kegel mit einer kreisförmigen Basis und einer Höhe.
+- **double getVolume()**: Gibt das Volumen des Kegels zurück.
+
+### Cuboid.java
+- **Cuboid(double width, double height, double depth)**: Konstruktor. Erstellt einen Quader mit Breite, Höhe und Tiefe.
+- **double getVolume()**: Gibt das Volumen des Quaders zurück.
+
+### Cylinder.java
+- **Cylinder(double radius, double height)**: Konstruktor. Erstellt einen Zylinder mit einer kreisförmigen Basis und einer Höhe.
+- **double getVolume()**: Gibt das Volumen des Zylinders zurück.
+
+### Rectangle.java
+- **Rectangle(double width, double height)**: Konstruktor. Erstellt ein Rechteck mit Breite und Höhe.
+- **double getArea()**: Gibt die Fläche des Rechtecks zurück.
+
+### RegularPrism.java
+- **RegularPrism(int nSides, double sideLength, double height)**: Konstruktor. Erstellt ein regelmäßiges Prisma mit einer polygonalen Basis.
+- **double getVolume()**: Gibt das Volumen des Prismas zurück.
+
+### RegularPyramid.java
+- **RegularPyramid(int nSides, double sideLength, double height)**: Konstruktor. Erstellt eine regelmäßige Pyramide mit einer polygonalen Basis.
+- **double getVolume()**: Gibt das Volumen der Pyramide zurück.
+
+### Sphere.java
+- **Sphere(double radius)**: Konstruktor. Erstellt eine Kugel mit einem Radius.
+- **double getVolume()**: Gibt das Volumen der Kugel zurück.
 
 ---
 
-## Fahrzeug-Modul
+## Fahrzeuge-Modul
 
 ### Bus.java
-- **void setDriver(Driver driver)**: Weist dem Bus einen Fahrer zu.
+- **Bus(double tankSize, double maxSpeed, GPSPosition position, int seatCount, String driverName)**: Konstruktor. Erstellt einen Bus mit einem Fahrernamen.
+- **void setDriver(Driver driver)**: Legt den Fahrer für den Bus fest.
 
 ### FleetManagement.java
 - **void addVehicle(Vehicle v)**: Fügt ein Fahrzeug zur Flotte hinzu.
+- **boolean removeVehicle(Vehicle v)**: Entfernt ein Fahrzeug aus der Flotte.
 
 ### GPSPosition.java
-- **void setPosition(double longitude, double latitude)**: Setzt die GPS-Position.
+- **GPSPosition(double longitude, double latitude)**: Konstruktor. Erstellt eine GPS-Position mit Längengrad und Breitengrad.
+- **void setPosition(double longitude, double latitude)**: Legt die GPS-Position fest.
+
+### PassengerVehicle.java
+- **PassengerVehicle(double tankSize, double maxSpeed, GPSPosition position, int seatCount)**: Konstruktor. Erstellt ein Passagierfahrzeug mit Sitzanzahl.
 
 ### Truck.java
-- **void load(double area)**: Lädt Fracht.
-- **void unload(double area)**: Entlädt Fracht.
-- **void setDriver(Driver driver)**: Weist dem LKW einen Fahrer zu.
+- **Truck(double tankSize, double maxSpeed, GPSPosition position, double loadingArea)**: Konstruktor. Erstellt einen LKW mit einer Ladefläche.
+- **void load(double area)**: Lädt Fracht in den LKW.
+
+### Vehicle.java
+- **Vehicle(double tankSize, double maxSpeed, GPSPosition position)**: Abstrakte Basisklasse für Fahrzeuge.
+- **void refuel(double amount)**: Betankt das Fahrzeug.
 
 ---
 
 ## Testklassen
 
-Alle Testklassen (z. B. TestDepartment.java, TestEmployee.java, TestShapes.java, TestVehicle.java) enthalten:
-- **public static void main(String[] args)**: Einstiegspunkt für das Ausführen von Tests und Demonstrationen der Hauptmodule.
+### TestDepartment.java
+- **void main(String[] args)**: Testet die Department-Klasse.
+
+### TestEmployee.java
+- **void main(String[] args)**: Testet die Vererbungshierarchie der Mitarbeiter.
+
+### TestShapes.java
+- **void main(String[] args)**: Testet das Formen-Modul.
+
+### TestVehicle.java
+- **void main(String[] args)**: Testet das Fahrzeuge-Modul.
 
 ---
 
