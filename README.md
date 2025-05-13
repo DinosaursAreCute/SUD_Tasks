@@ -42,7 +42,7 @@ Contributions are welcome! To contribute:
    ```
 3. Commit your changes with a clear message:
    ```sh
-   git commit -m "Add feature description"
+   git commit -m "Describe the changes you made"
    ```
 4. Push your branch:
    ```sh
