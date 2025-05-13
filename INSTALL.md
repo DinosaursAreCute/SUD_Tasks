@@ -55,4 +55,3 @@ Follow these steps to set up the SUD_Tasks project on your local machine.
 - Ensure your IDE is configured to use the correct JDK version.
 - If you encounter any issues, refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file for troubleshooting steps.
 
-Thank you for using SUD_Tasks!
