@@ -30,12 +30,12 @@ We are committed to fostering a welcoming and inclusive environment. Please adhe
 - Avoid offensive or inappropriate language.
 - Collaborate in a constructive and positive manner.
 
-For more details, please review our [Code of Conduct](CODE_OF_CONDUCT.md).
+For more details, please review our [Code of Conduct](Docs/CODE_OF_CONDUCT.md).
 
 ## Additional Resources
 
-- [Project Documentation](docs/README.md)
+- [Project Documentation](Docs/README.md)
 - [Issue Tracker](https://github.com/DinosaursAreCute/SUD_Tasks/issues)
-- [Pull Request Guidelines](docs/PULL_REQUEST_TEMPLATE.md)
+- [Pull Request Guidelines](Docs/PULL_REQUEST_TEMPLATE.md)
 
 Thank you for contributing to SUD_Tasks! Your efforts help make this project better for everyone.

@@ -30,11 +30,11 @@ Wir verpflichten uns, eine einladende und inklusive Umgebung zu fördern. Bitte 
 - Vermeide beleidigende oder unangemessene Sprache.
 - Arbeite konstruktiv und positiv zusammen.
 
-Für weitere Details lies bitte unseren [Verhaltenskodex](CODE_OF_CONDUCT.md).
+Für weitere Details lies bitte unseren [Verhaltenskodex](Docs/CODE_OF_CONDUCT.md).
 
 ## Zusätzliche Ressourcen
 
-- [Projektdokumentation](docs/README.md)
+- [Projektdokumentation](Docs/README_DE.md)
 - [Issue-Tracker](https://github.com/DinosaursAreCute/SUD_Tasks/issues)
-- [Richtlinien für Pull Requests](docs/PULL_REQUEST_TEMPLATE.md)
+- [Richtlinien für Pull Requests](Docs/PULL_REQUEST_TEMPLATE.md)
 

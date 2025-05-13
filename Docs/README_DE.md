@@ -50,6 +50,8 @@ Beiträge sind willkommen! So kannst du beitragen:
    ```
 5. Öffne eine Pull-Anfrage und beschreibe deine Änderungen.
 
+Falls du weitere Informationen benötigst, lies die [CONTRIBUTING_DE.md](Docs/CONTRIBUTING_DE.md).
+
 ### Mit VS Code beitragen
 
 Wenn du Visual Studio Code verwenden möchtest, um beizutragen, folge diesen Schritten:

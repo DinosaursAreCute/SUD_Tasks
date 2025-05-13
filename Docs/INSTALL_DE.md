@@ -53,5 +53,5 @@ Folge diesen Schritten, um das SUD_Tasks-Projekt auf deinem Rechner einzurichten
 7. Sobald alles konfiguriert ist, kannst du das Projekt direkt in VS Code bauen und starten.
 
 - Stelle sicher, dass deine IDE die richtige JDK-Version verwendet.
-- Falls du Probleme hast, schau in die [CONTRIBUTING.md](CONTRIBUTING.md) für weitere Hilfe.
+- Falls du Probleme hast, schau in die [CONTRIBUTING_DE.md](Docs/CONTRIBUTING_DE.md) für weitere Hilfe.
 
