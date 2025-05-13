@@ -1,4 +1,4 @@
-// Represents a manager with a fixed salary and a bonus percentage.
+//manager with a fixed salary and a bonus percentage.
 package Employees;
 
 public class Manager extends OfficeWorker {
@@ -10,6 +10,19 @@ public class Manager extends OfficeWorker {
     }
 
     public double getBonus(double base) { return base * bonusPercent / 100.0; }
+
     @Override
     public double getSalary() { return super.getSalary() + getBonus(super.getSalary()); }
+
+    public double getBonusPercent() { return bonusPercent; }
+
+    public void setBonusPercent(double bonusPercent) { 
+        if(bonusPercent > 100) throw new IllegalArgumentException("Bonus percent cannot be greater than 100%"); 
+        else if(bonusPercent < 0) throw new IllegalArgumentException("Bonus percent cannot be negative");
+        else this.bonusPercent = bonusPercent; }  
+    }
+    @Override
+    public void setName(String name) {
+        super.setName(name);
+    }
 }
