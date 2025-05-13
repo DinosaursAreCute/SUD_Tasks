@@ -9,8 +9,7 @@ You can find german versions of all documents in the Repo files.
 - `Code/Employees/` — Classes and tests related to employee management (e.g., `Employee`, `Manager`, `Department`, etc.)
 - `Code/Shapes/` — Classes for 2D and 3D geometric shapes and their properties
 - `Code/Vehicles/` — Vehicle management classes (e.g., `Vehicle`, `Bus`, `Truck`, etc.)
-- `Code/Test/` — Test classes for the main modules
-- `Feature_Files/` — Assignment descriptions and supporting documents
+- `Rollins Aufgaben/` — Assignment descriptions and supporting documents
 
 ## Java Versions
 - **Version Used:** Java 17
