@@ -2,6 +2,8 @@
 
 Welcome to the **SUD_Tasks** repository! This project contains my solutions to various programming assignments given in our school courses. The code is organized by topic and demonstrates core object-oriented programming concepts in Java.
 
+You can find german versions of all documents in the Repo files. 
+
 ## Project Structure
 
 - `Code/Employees/` — Classes and tests related to employee management (e.g., `Employee`, `Manager`, `Department`, etc.)
