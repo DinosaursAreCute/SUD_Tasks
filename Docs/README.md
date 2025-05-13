@@ -16,10 +16,10 @@ You can find german versions of all documents in the Repo files.
 - **Lowest Supported Version:** Java 8
 
 ## Installation
-For detailed installation and setup instructions, refer to the [INSTALL.md](Docs/INSTALL.md) file.
+For detailed installation and setup instructions, refer to the [INSTALL.md](INSTALL.md) file.
 
 ## Contributing
-For detailed contribution guidelines, refer to the [CONTRIBUTING.md](Docs/CONTRIBUTING.md) file.
+For detailed contribution guidelines, refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
 ### Legend of GitHub Terms
 
@@ -35,7 +35,7 @@ For detailed contribution guidelines, refer to the [CONTRIBUTING.md](Docs/CONTRI
 - **Pull:** Fetching and merging changes from a remote repository into your local repository.
 
 ## Changelog
-For a detailed list of changes and updates, see the [CHANGELOG.md](Docs/CHANGELOG.md) file.
+For a detailed list of changes and updates, see the [CHANGELOG.md](CHANGELOG.md) file.
 
 ## Contributors
 - **Repo Owner:** [DinosaursAreCute](https://github.com/DinosaursAreCute)
