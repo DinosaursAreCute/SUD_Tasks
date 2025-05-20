@@ -1,13 +1,12 @@
-package Vehicels;
+package Vehicles;
 
 import Employees.Driver;
-import Employees.DriverLicense;
 
 public class Truck extends Vehicle {
     private double loadingArea;
     private double loadedArea;
 
-    public Truck(double tankSize, double maxSpeed, GPSPosition position, double loadingArea) {
+    public Truck(double tankSize, double maxSpeed, Vehicels.GPSPosition position, double loadingArea) {
         super(tankSize, maxSpeed, position);
         setLoadingArea(loadingArea);
         setLoadedArea(0);
@@ -33,7 +32,7 @@ public class Truck extends Vehicle {
     }
     @Override
     public void setDriver(Driver driver) {
-        if (driver.getLicense() != DriverLicense.C) throw new IllegalArgumentException("Truck driver must have license C");
+        if (driver.getLicense() != 'C') throw new IllegalArgumentException("Truck driver must have license C");
         super.setDriver(driver);
     }
     public double getLoadedArea() { return loadedArea; }

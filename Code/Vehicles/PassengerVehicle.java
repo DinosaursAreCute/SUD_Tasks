@@ -1,5 +1,5 @@
 // Represents a passenger vehicle with seat management.
-package Vehicels;
+package Vehicles;
 
 import Employees.Employee;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ public class PassengerVehicle extends Vehicle {
     private int seatCount;
     private List<Employee> passengers;
 
-    public PassengerVehicle(double tankSize, double maxSpeed, GPSPosition position, int seatCount) {
+    public PassengerVehicle(double tankSize, double maxSpeed, Vehicels.GPSPosition position, int seatCount) {
         super(tankSize, maxSpeed, position);
         setSeatCount(seatCount);
         setPassengers(new ArrayList<>());

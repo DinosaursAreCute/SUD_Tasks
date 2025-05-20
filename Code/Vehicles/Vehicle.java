@@ -1,17 +1,16 @@
-package Vehicels;
-
+package Vehicles;
+import Vehicels.GPSPosition;
 import Employees.Driver;
-
 public abstract class Vehicle {
     protected double tankSize;
     protected double tankLevel;
     protected double currentSpeed;
     protected double maxSpeed;
     protected boolean engineOn;
-    protected GPSPosition position;
+    protected Vehicels.GPSPosition position;
     protected Driver driver;
 
-    public Vehicle(double tankSize, double maxSpeed, GPSPosition position) {
+    public Vehicle(double tankSize, double maxSpeed, Vehicels.GPSPosition position) {
         setTankSize(tankSize);
         setTankLevel(0);
         setMaxSpeed(maxSpeed);
@@ -81,9 +80,8 @@ public abstract class Vehicle {
         tankLevel -= needed;
         position = newPosition;
     }
-    public void setDriver(Driver driver) { this.driver = driver; }
     public Driver getDriver() { return driver; }
-    public GPSPosition getPosition() { return position; }
+    public Vehicels.GPSPosition getPosition() { return position; }
     public String getInfo() {
         return "Tank: " + tankLevel + "/" + tankSize + ", Speed: " + currentSpeed + "/" + maxSpeed + ", Engine: " + (engineOn ? "On" : "Off");
     }

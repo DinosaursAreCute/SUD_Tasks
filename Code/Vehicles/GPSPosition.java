@@ -1,5 +1,5 @@
 // Represents a GPS position with longitude and latitude.
-package Vehicels;
+package Vehicles;
 
 public class GPSPosition {
     private double longitude; // 0° to <360°

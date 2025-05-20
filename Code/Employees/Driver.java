@@ -17,5 +17,5 @@ public class Driver extends ShiftWorker {
         else  this.license = license;
     }
 
-    public DriverLicense getLicense() { return license; }
+    public char getLicense() { return license; }
 }
