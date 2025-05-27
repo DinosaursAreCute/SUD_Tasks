@@ -1,5 +1,8 @@
 package Vehicles;
 import Employees.Driver;
+
+import java.util.ArrayList;
+
 public abstract class Vehicle {
     protected double tankSize;
     protected double tankLevel;
@@ -7,7 +10,7 @@ public abstract class Vehicle {
     protected double maxSpeed;
     protected boolean engineOn;
     protected GPSPosition position;
-    protected Driver driver;
+    protected Driver driver = new Driver (0000,"Default Driver",1,'0');
 
     public Vehicle(double tankSize, double maxSpeed, GPSPosition position) {
         setTankSize(tankSize);
@@ -16,7 +19,16 @@ public abstract class Vehicle {
         setCurrentSpeed(0);
         setEngineOn(false);
         setPosition(position);
-        setDriver(null);
+    }
+    public Vehicle(double tankSize, double maxSpeed,Driver driver, GPSPosition position) {
+        setTankSize(tankSize);
+        setTankLevel(0);
+        setMaxSpeed(maxSpeed);
+        setCurrentSpeed(0);
+        setEngineOn(false);
+        setPosition(position);
+        setDriver(driver);
+
     }
 
     public void setTankSize(double tankSize) {
@@ -70,15 +82,22 @@ public abstract class Vehicle {
     public void brake(double speed) {
         currentSpeed = Math.max(currentSpeed - speed, 0); //this is returns the bigger number. If the speed is smaller than 0, it will return 0 so useful so remmeber that one
     }
-    public void drive(double kilometers, GPSPosition newPosition) {
+    public void drive(GPSPosition newPosition) {
         if (!engineOn) throw new IllegalStateException("Engine must be on");
         if (tankLevel <= 0) throw new IllegalStateException("Tank is empty");
-        // We did not need it but i wanted to do this so yea this is a simple consumption model: 1L per 10km
+        double kilometers = GPSPosition.distanceInKm(
+                position.getLatitude(), position.getLongitude(),
+                newPosition.getLatitude(), newPosition.getLongitude()
+        );
         double needed = kilometers / 10.0;
         if (tankLevel < needed) throw new IllegalStateException("Not enough fuel");
         tankLevel -= needed;
         position = newPosition;
     }
+
+
+    public double getTankLevel() { return tankLevel; }
+    public double getTankSize() { return tankSize; }
     public Driver getDriver() { return driver; }
     public GPSPosition getPosition() { return position; }
     public String getInfo() {
