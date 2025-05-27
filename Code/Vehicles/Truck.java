@@ -6,7 +6,7 @@ public class Truck extends Vehicle {
     private double loadingArea;
     private double loadedArea;
 
-    public Truck(double tankSize, double maxSpeed, Vehicels.GPSPosition position, double loadingArea) {
+    public Truck(double tankSize, double maxSpeed, GPSPosition position, double loadingArea) {
         super(tankSize, maxSpeed, position);
         setLoadingArea(loadingArea);
         setLoadedArea(0);

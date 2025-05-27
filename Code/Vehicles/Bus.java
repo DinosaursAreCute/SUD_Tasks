@@ -6,7 +6,7 @@ import Employees.Driver;
 public class Bus extends PassengerVehicle {
     private String driverName;
 
-    public Bus(double tankSize, double maxSpeed, Vehicels.GPSPosition position, int seatCount, String driverName) {
+    public Bus(double tankSize, double maxSpeed, GPSPosition position, int seatCount, String driverName) {
         super(tankSize, maxSpeed, position, seatCount);
         setDriverName(driverName);
     }

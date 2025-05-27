@@ -9,6 +9,10 @@ public class RegularPyramid extends Shape3D {
         this.base = new RegularPolygon(nSides, sideLength);
         setHeight(height);
     }
+    public RegularPyramid(RegularPolygon base,double height){
+        this.base = base;
+        setHeight(height);
+    }
 
     public void setHeight(double height) {
         if (height <= 0) throw new IllegalArgumentException("Height must be positive");

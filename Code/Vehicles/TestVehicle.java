@@ -1,7 +1,8 @@
-package Vehicels;
+package Vehicles;
 
-import Vehicels.*;
+import Vehicles.*;
 import Employees.*;
+
 
 public class TestVehicle {
     public static void main(String[] args) {

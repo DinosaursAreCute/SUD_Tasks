@@ -1,5 +1,4 @@
 package Vehicles;
-import Vehicels.GPSPosition;
 import Employees.Driver;
 public abstract class Vehicle {
     protected double tankSize;
@@ -7,10 +6,10 @@ public abstract class Vehicle {
     protected double currentSpeed;
     protected double maxSpeed;
     protected boolean engineOn;
-    protected Vehicels.GPSPosition position;
+    protected GPSPosition position;
     protected Driver driver;
 
-    public Vehicle(double tankSize, double maxSpeed, Vehicels.GPSPosition position) {
+    public Vehicle(double tankSize, double maxSpeed, GPSPosition position) {
         setTankSize(tankSize);
         setTankLevel(0);
         setMaxSpeed(maxSpeed);
@@ -81,7 +80,7 @@ public abstract class Vehicle {
         position = newPosition;
     }
     public Driver getDriver() { return driver; }
-    public Vehicels.GPSPosition getPosition() { return position; }
+    public GPSPosition getPosition() { return position; }
     public String getInfo() {
         return "Tank: " + tankLevel + "/" + tankSize + ", Speed: " + currentSpeed + "/" + maxSpeed + ", Engine: " + (engineOn ? "On" : "Off");
     }

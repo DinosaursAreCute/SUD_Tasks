@@ -4,6 +4,7 @@ public abstract class Employee {
     protected int id;
     protected String name;
 
+
     public Employee(int id, String name) {
         try {
             setName(name);
@@ -13,6 +14,9 @@ public abstract class Employee {
             throw e;
         }
     }
+
+    abstract public void setSalary(double salary);
+
 
     public int getId() { return id; }
 

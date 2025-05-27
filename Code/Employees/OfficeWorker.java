@@ -2,20 +2,18 @@
 package Employees;
 
 public class OfficeWorker extends Employee {
-    private double fixedSalary;
 
+    private double salary;
     public OfficeWorker(int id, String name, double fixedSalary) {
         super(id, name);
         setId(id);
-        this.fixedSalary = fixedSalary;
     }
-
     @Override
-    public double getSalary() { return fixedSalary; }
-
-    public double getFixedSalary() { return fixedSalary; }
-
-    public void setFixedSalary(double fixedSalary) { this.fixedSalary = fixedSalary; }
+    public double getSalary(){return salary; }
+    @Override
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
 
     @Override
     public void setName(String name) {
@@ -28,4 +26,6 @@ public class OfficeWorker extends Employee {
         }
         super.setId(id);
     }
+
+
 }
