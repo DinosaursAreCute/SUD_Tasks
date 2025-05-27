@@ -1,95 +1,89 @@
+package CompanyManagement;
+
 import Employees.Department;
 import Employees.Employee;
 import Employees.ShiftWorker;
 import Vehicles.Vehicle;
 
+import java.util.ArrayList;
+
 public class CompanyManagment {
-    private Vehicle[] vehicles;
-    private Department [] departments;
-    private Employee[] employees;
-    private ShiftWorker[] shiftWorkers;
+    private ArrayList<Vehicle> vehicles = new ArrayList<>();
+    private ArrayList<Department> departments = new ArrayList<>();
+    private ArrayList<Employee> employees = new ArrayList<>();
+    private ArrayList<ShiftWorker> shiftWorkers = new ArrayList<>();
 
 
     public void addVehicle(Vehicle vehicle) {
-        Vehicle[] newVehicles = new Vehicle[vehicles.length + 1];
-        System.arraycopy(vehicles, 0, newVehicles, 0, vehicles.length);
-        newVehicles[vehicles.length] = vehicle;
-        vehicles = newVehicles;
+        vehicles.add(vehicle);
     }
     public void removeVehicle(Vehicle vehicle) {
-        Vehicle[] newVehicles = new Vehicle[vehicles.length - 1];
-        int index = 0;
-        for (int i = 0; i < vehicles.length; i++) {
-            if (vehicles[i] != vehicle) {
-                newVehicles[index++] = vehicles[i];
-            }
-        }
-        vehicles = newVehicles;
+        vehicles.remove(vehicle);
     }
     public void addDepartment(Department department) {
-        Department[] newDepartments = new Department[departments.length + 1];
-        System.arraycopy(departments, 0, newDepartments, 0, departments.length);
-        newDepartments[departments.length] = department;
-        departments = newDepartments;
+        departments.add(department);
     }
-    public void removeDepartment(Department department) {
-        Department[] newDepartments = new Department[departments.length - 1];
-        int index = 0;
-        for (int i = 0; i < departments.length; i++) {
-            if (departments[i] != department) {
-                newDepartments[index++] = departments[i];
-            }
-        }
-        departments = newDepartments;
+    public void add(Department department) {
+        departments.add(department);
     }
-    public void addEmployee(Employee employee) {
-        Employee[] newEmployees = new Employee[employees.length + 1];
-        System.arraycopy(employees, 0, newEmployees, 0, employees.length);
-        newEmployees[employees.length] = employee;
-        employees = newEmployees;
+    public void add(Vehicle vehicle) {
+        vehicles.add(vehicle);
     }
-    public void removeEmployee(Employee employee) {
-        Employee[] newEmployees = new Employee[employees.length - 1];
-        int index = 0;
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i] != employee) {
-                newEmployees[index++] = employees[i];
-            }
-        }
-        employees = newEmployees;
+    public void add(Employee employee){
+        employees.add(employee);
+    }
+    public void add(ShiftWorker shiftWorker) {
+        shiftWorkers.add(shiftWorker);
     }
 
-    public ShiftWorker[] getShiftWorkers() {
+    public void remove(Department department) {
+        departments.remove(department);
+    }
+
+    public void remove(Employee employee) {
+        employees.remove(employee);
+    }
+
+    public void remove(ShiftWorker shiftWorker) {
+        shiftWorkers.remove(shiftWorker);
+    }
+
+    public void remove(Vehicle vehicle){
+        vehicles.remove(vehicle);
+    }
+
+
+    public ArrayList<ShiftWorker> getShiftWorkers() {
         return shiftWorkers;
     }
-    public void setShiftWorkers(ShiftWorker[] shiftWorkers) {
+    public void setShiftWorkers(ArrayList<ShiftWorker> shiftWorkers) {
         this.shiftWorkers = shiftWorkers;
     }
 
-    public Vehicle[] getVehicles() {
+    public ArrayList<Vehicle> getVehicles() {
         return vehicles;
     }
-    public void setVehicles(Vehicle[] vehicles) {
+    public void setVehicles(ArrayList<Vehicle> vehicles) {
         this.vehicles = vehicles;
     }
 
-    public Employee[] getEmployees() {
+    public ArrayList<Employee> getEmployees() {
         return employees;
     }
-    public void setEmployees(Employee[] employees) {
+    public void setEmployees(ArrayList<Employee> employees) {
         this.employees = employees;
     }
 
-    public Department[] getDepartments() {
+    public ArrayList<Department> getDepartments() {
         return departments;
     }
-    public void setDepartments(Department[] departments) {
+    public void setDepartments(ArrayList<Department> departments) {
         this.departments = departments;
     }
 
     public void workADay(){
-        for (int i = 0; i < shiftWorkers.length; i++) {
-            shiftWorkers[i].work();
+        for (int i = 0; i < shiftWorkers.size(); i++) {
+            shiftWorkers.get(i).work(8);
         }
     }
 }
